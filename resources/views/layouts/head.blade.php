@@ -12,8 +12,12 @@
 <link href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet">
 
 <!--- Style css -->
-@if (App::getLocale() == 'en')
+
+{{-- if the app is in english mode display the app in left to right mode  --}}
+@if (App::getLocale() == 'en') 
     <link href="{{ URL::asset('assets/css/ltr.css') }}" rel="stylesheet">
+
+{{-- if the app is in arabic mode display the app in right to left mode  --}}
 @else
     <link href="{{ URL::asset('assets/css/rtl.css') }}" rel="stylesheet">
 @endif
